@@ -1,0 +1,28 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "bootstrap": "npm install",
+    "clean": "rm -rf node_modules package-lock.json .next",
+    "dev": "npm run clean && npm run bootstrap && next dev -p 3001",
+    "build": "npm run clean && npm run bootstrap && next build",
+    "start": "next start -p 3001"
+  },
+  "dependencies": {
+    "next": "15.4.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next-auth": "^4.24.11",
+    "@hookform/resolvers": "^2.9.11",
+    "@tanstack/react-query": "^4.40.1",
+    "zod": "^3.22.2",
+    "tailwindcss": "^3.3.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21"
+  },
+  "overrides": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  }
+}

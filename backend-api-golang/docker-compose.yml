@@ -1,0 +1,18 @@
+
+
+services:
+  db:
+    image: postgres:15            # versão estável recente
+    container_name: plataforma_db
+    restart: unless-stopped
+    ports:
+      - "5432:5432"               # mapeia porta local 5432
+    environment:
+      POSTGRES_USER: postgres     # usuário DB
+      POSTGRES_PASSWORD: senha123 # senha DB
+      POSTGRES_DB: plataforma     # nome do database
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
